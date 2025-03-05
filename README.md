@@ -2,6 +2,10 @@
 
 Este projeto consiste em uma calculadora simples desenvolvida com HTML, CSS e JavaScript.
 
+## Descrição
+Uma calculadora que permite realizar operações básicas como adição, subtração, multiplicação e divisão, com uma interface responsiva e moderna.
+
+
 ## Funcionalidades
 - Operações básicas: adição, subtração, multiplicação e divisão
 - Botão de limpar (C)
@@ -28,12 +32,11 @@ Este projeto consiste em uma calculadora simples desenvolvida com HTML, CSS e Ja
    - Manipulação do visor
    - Tratamento de erros
 
-## Próximos Passos
-- Implementar funcionalidades avançadas (porcentagem, raiz quadrada, etc.)
-- Adicionar suporte para teclado
-- Melhorar a experiência mobile
 
 ## Tecnologias Utilizadas
 - HTML5
 - CSS3
 - JavaScript
+
+## Contribuindo
+Se você deseja contribuir para este projeto, sinta-se à vontade para abrir um pull request ou relatar problemas.

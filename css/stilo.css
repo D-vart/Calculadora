@@ -1,103 +1,74 @@
+/* Estilo da calculadora */
 .calculadora {
-    width: 90%;
-    max-width: 320px;
-    margin: 5vh auto;
-    padding: 2rem;
-    background-color: #2d2d2d;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    font-family: 'Segoe UI', sans-serif;
+    width: 90%; /* Largura da calculadora */
+    max-width: 320px; /* Largura máxima */
+    margin: 5vh auto; /* Margem superior e centralização */
+    padding: 2rem; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 15px; /* Bordas arredondadas */
+    font-family: 'Arial', sans-serif; /* Fonte mais amigável */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
 }
 
-@media (max-width: 480px) {
-    .calculadora {
-        margin: 2vh auto;
-        padding: 1.5rem;
-    }
-    
-    #visor {
-        font-size: 24px;
-        height: 50px;
-    }
-    
-    button {
-        padding: 15px;
-        font-size: 16px;
-    }
-}
-
-
-
+/* Estilo do visor */
 #visor {
-    width: 100%;
-    height: 60px;
-    margin-bottom: 1.5rem;
-    padding: 0.8rem;
-    font-size: 28px;
-    text-align: right;
-    border: 2px solid #444;
-    border-radius: 8px;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Largura total */
+    height: 60px; /* Altura do visor */
+    margin-bottom: 1.5rem; /* Margem inferior */
+    padding: 0.8rem; /* Espaçamento interno */
+    font-size: 28px; /* Tamanho da fonte */
+    text-align: right; /* Alinhamento do texto */
+    border: 2px solid #ccc; /* Borda mais suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    color: #333; /* Cor do texto mais escura */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
 }
 
-
-
+/* Estilo dos botões */
 .botoes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    padding: 10px;
+    display: grid; /* Usando grid para layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 10px; /* Espaçamento entre os botões */
 }
-
 
 button {
-    padding: 1rem;
-    font-size: 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #444;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 1rem; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    background: linear-gradient(145deg, #007bff, #0056b3); /* Gradiente de fundo */
+    color: #ffffff; /* Cor do texto */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background 0.3s ease, transform 0.2s; /* Transições suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
 }
 
-
+/* Efeitos de hover e active para os botões */
 button:hover {
-    background-color: #555;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #0056b3, #004494); /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão */
 }
 
 button:active {
-    background-color: #666;
-    transform: translateY(0);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #004494, #003366); /* Cor ao clicar */
+    transform: translateY(0); /* Retorna ao normal */
 }
 
-button[data-operator] {
-    background-color: #ff9500;
-}
-
-button[data-operator]:hover {
-    background-color: #ffa500;
-}
-
-button[data-operator]:active {
-    background-color: #ff8c00;
-}
-
-button[data-equals] {
-    background-color: #34c759;
-    grid-column: span 2;
-}
-
-button[data-equals]:hover {
-    background-color: #30d158;
-}
-
-button[data-equals]:active {
-    background-color: #2ec653;
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .calculadora {
+        margin: 2vh auto; /* Margem ajustada para telas pequenas */
+        padding: 1.5rem; /* Espaçamento ajustado */
+    }
+    
+    #visor {
+        font-size: 24px; /* Tamanho da fonte ajustado */
+        height: 50px; /* Altura do visor ajustada */
+    }
+    
+    button {
+        padding: 15px; /* Espaçamento ajustado */
+        font-size: 16px; /* Tamanho da fonte ajustado */
+    }
 }
