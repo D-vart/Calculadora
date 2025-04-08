@@ -11,22 +11,22 @@
 - [X] Link para JavaScript
 
 ### css/stilo.css
-- [ ] Reset básico
-- [ ] Estilos do corpo
-- [ ] Container da calculadora
-- [ ] Estilo do visor
-- [ ] Estilo dos botões
-- [ ] Estilo dos operadores
-- [ ] Botão de igual
+- [X] Reset básico (feito em 15/07)
+- [X] Estilos do corpo (feito em 15/07)
+- [X] Container da calculadora (feito em 15/07)
+- [X] Estilo do visor (feito em 15/07)
+- [X] Estilo dos botões (feito em 15/07)
+- [X] Estilo dos operadores (feito em 15/07)
+- [X] Botão de igual (feito em 15/07)
 
 ### js/script.js
-- [ ] Seleção de elementos
-- [ ] Event listeners
-- [ ] Função para números
-- [ ] Função limpar visor
-- [ ] Lógica operações básicas
-- [ ] Função de cálculo
-- [ ] Tratamento de erros
+- [X] Seleção de elementos (feito em 15/07)
+- [X] Event listeners (feito em 15/07)
+- [X] Função para números (feito em 15/07)
+- [X] Função limpar visor (feito em 15/07)
+- [X] Lógica operações básicas (feito em 15/07)
+- [X] Função de cálculo (feito em 15/07)
+- [X] Tratamento de erros (feito em 15/07)
 
 ## 💾 Checkpoints de Commits
 
