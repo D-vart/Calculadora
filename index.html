@@ -1,34 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="./css/stilo.css">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="css/stilo.css">
 </head>
 <body>
+    <!-- Calculadora Básica -->
     <div class="calculadora">
-        <input type="text" id="visor" disabled>
-        <div class="botoes">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
-            <button>C</button>
-            <button>0</button>
-            <button>=</button>
-            <button>/</button>
-
-        </div>
+        <!-- Visor (input simples) -->
+        <input type="text" id="visor" class="visor" readonly>
+        
+        <!-- Botões em uma tabela simples -->
+        <table class="botoes">
+            <tr>
+                <td><button class="numero">7</button></td>
+                <td><button class="numero">8</button></td>
+                <td><button class="numero">9</button></td>
+                <td><button class="operador">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="numero">4</button></td>
+                <td><button class="numero">5</button></td>
+                <td><button class="numero">6</button></td>
+                <td><button class="operador">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="numero">1</button></td>
+                <td><button class="numero">2</button></td>
+                <td><button class="numero">3</button></td>
+                <td><button class="operador">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="numero">0</button></td>
+                <td><button class="numero">.</button></td>
+                <td><button class="limpar">C</button></td>
+                <td><button class="operador">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button class="igual">=</button></td>
+            </tr>
+        </table>
     </div>
-    <script src="./js/script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

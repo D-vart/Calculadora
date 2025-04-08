@@ -1,42 +1,68 @@
-# Projeto Calculadora
+# Calculadora Web Simples
 
-Este projeto consiste em uma calculadora simples desenvolvida com HTML, CSS e JavaScript.
+![Preview da Calculadora](preview.png)
 
-## Descrição
-Uma calculadora que permite realizar operações básicas como adição, subtração, multiplicação e divisão, com uma interface responsiva e moderna.
+Uma calculadora web interativa desenvolvida com tecnologias front-end básicas.
 
+## 🚀 Funcionalidades Principais
 
-## Funcionalidades
-- Operações básicas: adição, subtração, multiplicação e divisão
-- Botão de limpar (C)
-- Botão de igual (=) para calcular o resultado
-- Interface responsiva e moderna
+### Operações Matemáticas
+- ➕ Adição
+- ➖ Subtração 
+- ✖️ Multiplicação
+- ➗ Divisão
+- 🔄 Limpar cálculo (C)
+- ⏹️ Calcular resultado (=)
 
-## Alterações Realizadas
-1. **Estilização Inicial**
-   - Layout básico da calculadora
-   - Cores e espaçamento inicial
+### Interface
+- 🖥️ Visor claro para visualização
+- 🔘 Botões coloridos por categoria
+- ✨ Efeitos de hover nos botões
+- 📱 Design responsivo
 
-2. **Melhorias de Design**
-   - Tema escuro moderno
-   - Sombras e efeitos de profundidade
-   - Botões com interações suaves
-   - Estilo diferenciado para operadores e botão de igual
+### Lógica
+- ✅ Validação de entrada
+- 🛑 Tratamento de erros (divisão por zero)
+- 🔢 Suporte a números decimais
 
-3. **Responsividade**
-   - Ajustes de tamanho e espaçamento
-   - Melhoria na exibição do visor
+## 🛠️ Estrutura Técnica
 
-4. **Funcionalidade JavaScript**
-   - Implementação da lógica de cálculo
-   - Manipulação do visor
-   - Tratamento de erros
+```plaintext
+projetoCalculadora/
+├── index.html        # Estrutura principal
+├── css/
+│   └── style.css     # Estilos visuais
+└── js/
+    └── script.js     # Lógica da calculadora
+```
 
+## 📋 Pré-requisitos
 
-## Tecnologias Utilizadas
-- HTML5
-- CSS3
-- JavaScript
+- Navegador moderno (Chrome, Firefox, Edge)
+- Nenhuma dependência externa
 
-## Contribuindo
-Se você deseja contribuir para este projeto, sinta-se à vontade para abrir um pull request ou relatar problemas.
+## 🧩 Como Usar
+
+1. Clone o repositório
+2. Abra `index.html` no navegador
+3. Utilize os botões para realizar cálculos
+
+## 🔧 Tecnologias Utilizadas
+
+| Tecnologia | Função |
+|------------|--------|
+| HTML5 | Estrutura da página |
+| CSS3 | Estilização e layout |
+| JavaScript | Lógica e interatividade |
+
+## 📝 Licença
+
+Este projeto é open-source sob licença MIT.
+
+## 🤝 Como Contribuir
+
+1. Faça um fork do projeto
+2. Crie sua branch (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request
