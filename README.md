@@ -1,7 +1,5 @@
 # Calculadora Web Simples
 
-![Preview da Calculadora](preview.png)
-
 Uma calculadora web interativa desenvolvida com tecnologias front-end básicas.
 
 ## 🚀 Funcionalidades Principais
@@ -31,7 +29,7 @@ Uma calculadora web interativa desenvolvida com tecnologias front-end básicas.
 projetoCalculadora/
 ├── index.html        # Estrutura principal
 ├── css/
-│   └── style.css     # Estilos visuais
+│   └── stilo.css     # Estilos visuais
 └── js/
     └── script.js     # Lógica da calculadora
 ```

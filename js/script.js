@@ -1,76 +1,52 @@
-// CALCULADORA SIMPLES - VERSÃO CORRIGIDA
+// CALCULADORA SIMPLES - VERSÃO ATUALIZADA
 
-// 1. Selecionar elementos
 const visor = document.getElementById('visor');
 const botoes = document.querySelectorAll('button');
 
-// 2. Variáveis para cálculos
 let valorAtual = '0';
 let valorAnterior = '';
 let operacao = undefined;
 let resetVisor = false;
 
-// 3. Função para atualizar visor
 function atualizarVisor() {
     let display = valorAtual;
     if (operacao !== undefined && valorAnterior !== '') {
-        if (resetVisor) {
-            display = `${valorAnterior} ${operacao}`;
-        } else {
-            display = `${valorAnterior} ${operacao} ${valorAtual}`;
-        }
+        display = resetVisor
+            ? `${valorAnterior} ${operacao}`
+            : `${valorAnterior} ${operacao} ${valorAtual}`;
     }
     visor.value = display;
 }
 
-// 4. Adicionar números ao visor
-botoes.forEach(botao => {
-    if (botao.className === 'numero') {
-        botao.addEventListener('click', () => {
-            if (valorAtual === '0' || resetVisor) {
-                valorAtual = '';
-                resetVisor = false;
-            }
-            valorAtual += botao.innerText;
-            atualizarVisor();
-        });
+function inserirNumero(numero) {
+    if (resetVisor || valorAtual === '0' || valorAtual === 'Erro') {
+        valorAtual = '';
+        resetVisor = false;
     }
-});
 
-// 5. Função para limpar visor (C)
-document.querySelector('.limpar').addEventListener('click', () => {
+    if (numero === '.' && valorAtual.includes('.')) {
+        return;
+    }
+
+    valorAtual += numero;
+    atualizarVisor();
+}
+
+function limpar() {
     valorAtual = '0';
     valorAnterior = '';
     operacao = undefined;
+    resetVisor = false;
     atualizarVisor();
-});
+}
 
-// 6. Operações básicas (+, -, *, /)
-botoes.forEach(botao => {
-    if (botao.className === 'operador') {
-        botao.addEventListener('click', () => {
-            if (valorAtual === '') return;
-            
-            if (valorAnterior !== '') {
-                calcular();
-            }
-            
-            operacao = botao.innerText;
-            valorAnterior = valorAtual;
-            resetVisor = true;
-            atualizarVisor();
-        });
-    }
-});
-
-// 7. Função para calcular
 function calcular() {
-    let resultado;
     const anterior = parseFloat(valorAnterior);
     const atual = parseFloat(valorAtual);
 
     if (isNaN(anterior) || isNaN(atual)) return;
 
+    let resultado;
     switch (operacao) {
         case '+':
             resultado = anterior + atual;
@@ -82,6 +58,10 @@ function calcular() {
             resultado = anterior * atual;
             break;
         case '/':
+            if (atual === 0) {
+                resultado = 'Erro';
+                break;
+            }
             resultado = anterior / atual;
             break;
         default:
@@ -95,8 +75,30 @@ function calcular() {
     atualizarVisor();
 }
 
-// 8. Botão de igual
+botoes.forEach(botao => {
+    if (botao.classList.contains('numero')) {
+        botao.addEventListener('click', () => inserirNumero(botao.innerText));
+    }
+
+    if (botao.classList.contains('operador')) {
+        botao.addEventListener('click', () => {
+            if (valorAtual === '' || valorAtual === 'Erro') return;
+
+            if (valorAnterior !== '') {
+                calcular();
+            }
+
+            operacao = botao.innerText;
+            valorAnterior = valorAtual;
+            resetVisor = true;
+            atualizarVisor();
+        });
+    }
+});
+
+document.querySelector('.limpar').addEventListener('click', limpar);
+
 document.querySelector('.igual').addEventListener('click', () => {
-    if (operacao === undefined) return;
+    if (operacao === undefined || valorAtual === 'Erro') return;
     calcular();
 });
